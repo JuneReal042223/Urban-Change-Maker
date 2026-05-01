@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="June Fe Gilig Payot — scholar-practitioner-mentor in inclusive urban development, resilient social housing, community-driven upgrading, and housing justice in the Global South." />
+  <meta name="keywords" content="June Fe Gilig Payot, social housing, inclusive urban development, resilient housing, urban planning, Philippines, SHFC, housing policy, community-driven upgrading" />
+  <meta name="author" content="June Fe Gilig Payot" />
+  <title>June Fe Gilig Payot | Inclusive Urban Development & Resilient Social Housing</title>
+
+  <style>
+    :root {
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --ink: #0f172a;
+      --muted: #475569;
+      --soft: #e2e8f0;
+      --accent: #0f766e;
+      --accent-dark: #134e4a;
+      --dark: #020617;
+      --dark-2: #0f172a;
+      --white: #ffffff;
+      --shadow: 0 20px 60px rgba(15, 23, 42, 0.10);
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.08);
+      --radius: 24px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 55%, #ecfdf5 100%);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.9);
+      backdrop-filter: blur(16px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+      gap: 24px;
+    }
+
+    .brand-name {
+      font-size: 1.1rem;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-subtitle {
+      font-size: 0.72rem;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-top: 2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      color: #475569;
+      font-size: 0.92rem;
+      font-weight: 600;
+    }
+
+    .nav-links a:hover {
+      color: var(--ink);
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      padding: 13px 20px;
+      font-weight: 700;
+      transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+      cursor: pointer;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .button-primary {
+      background: var(--dark);
+      color: var(--white);
+    }
+
+    .button-primary:hover {
+      background: #1e293b;
+    }
+
+    .button-secondary {
+      background: rgba(255, 255, 255, 0.85);
+      border-color: #cbd5e1;
+      color: var(--ink);
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 86px 0 92px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      width: 560px;
+      height: 560px;
+      border-radius: 50%;
+      background: rgba(153, 246, 228, 0.45);
+      filter: blur(80px);
+      top: -160px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 28px;
+    }
+
+    .pill {
+      background: rgba(255, 255, 255, 0.84);
+      border: 1px solid #ccfbf1;
+      color: #334155;
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 0.9rem;
+      font-weight: 650;
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+    }
+
+    h1 {
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      line-height: 0.98;
+      letter-spacing: -0.065em;
+      max-width: 820px;
+    }
+
+    .hero-copy {
+      margin-top: 28px;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 1.18rem;
+      line-height: 1.8;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .profile-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #e2e8f0;
+      border-radius: 34px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .profile-inner {
+      background: linear-gradient(135deg, #020617 0%, #134e4a 54%, #047857 100%);
+      color: var(--white);
+      border-radius: 26px;
+      padding: 28px;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.24em;
+      font-weight: 800;
+      font-size: 0.78rem;
+      margin-bottom: 12px;
+    }
+
+    .profile-inner .eyebrow {
+      color: #99f6e4;
+    }
+
+    .profile-inner h2 {
+      font-size: 1.85rem;
+      line-height: 1.2;
+      letter-spacing: -0.04em;
+    }
+
+    .profile-list {
+      list-style: none;
+      display: grid;
+      gap: 14px;
+      margin-top: 26px;
+      color: #ccfbf1;
+      font-size: 0.95rem;
+    }
+
+    .profile-list li::before {
+      content: "•";
+      color: #5eead4;
+      font-weight: 900;
+      margin-right: 10px;
+    }
+
+    .mini-stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .mini-stat {
+      background: #f8fafc;
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .mini-stat strong {
+      display: block;
+      font-size: 1.8rem;
+      letter-spacing: -0.04em;
+    }
+
+    .mini-stat span {
+      display: block;
+      margin-top: 4px;
+      color: #64748b;
+      font-size: 0.86rem;
+      line-height: 1.35;
+    }
+
+    section {
+      padding: 76px 0;
+    }
+
+    .section-title {
+      max-width: 880px;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+    }
+
+    .two-column {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 34px;
+      margin-top: 34px;
+    }
+
+    .statement-card {
+      background: var(--dark);
+      color: var(--white);
+      border-radius: var(--radius);
+      padding: 34px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .statement-card p:last-child {
+      margin-top: 18px;
+      font-size: 1.55rem;
+      line-height: 1.55;
+      letter-spacing: -0.035em;
+      font-weight: 650;
+    }
+
+    .copy-block {
+      display: grid;
+      gap: 18px;
+      color: var(--muted);
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+
+    .dark-section {
+      background: var(--dark);
+      color: var(--white);
+      padding: 86px 0;
+    }
+
+    .dark-section .eyebrow {
+      color: #5eead4;
+    }
+
+    .dark-section .section-title,
+    .urban-section .section-title {
+      color: var(--white);
+    }
+
+    .dark-copy {
+      color: #cbd5e1;
+      max-width: 780px;
+      margin-top: 24px;
+      font-size: 1.08rem;
+      line-height: 1.8;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-top: 34px;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 22px;
+      padding: 22px;
+    }
+
+    .stat-card strong {
+      display: block;
+      color: var(--white);
+      font-size: 2rem;
+      line-height: 1;
+      letter-spacing: -0.04em;
+    }
+
+    .stat-card span {
+      display: block;
+      margin-top: 12px;
+      color: #cbd5e1;
+      font-size: 0.92rem;
+      line-height: 1.55;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+      transition: transform 0.18s ease, box-shadow 0.18s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      display: grid;
+      place-items: center;
+      background: var(--dark);
+      color: var(--white);
+      border-radius: 18px;
+      font-size: 1.4rem;
+      margin-bottom: 18px;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      letter-spacing: -0.025em;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.75;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .education-card {
+      background: var(--surface);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .education-card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 5px;
+      letter-spacing: -0.03em;
+    }
+
+    .education-card .school {
+      font-weight: 750;
+      color: #334155;
+      margin-bottom: 10px;
+    }
+
+    .education-card p {
+      color: var(--muted);
+    }
+
+    .formation-box {
+      margin-top: 22px;
+      background: var(--surface);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius);
+      padding: 28px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
+    }
+
+    .formation-box h3 {
+      font-size: 1.55rem;
+      letter-spacing: -0.035em;
+    }
+
+    .formation-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .formation-list li {
+      background: #f8fafc;
+      border-radius: 16px;
+      padding: 14px 16px;
+      color: #334155;
+    }
+
+    .urban-section {
+      background: linear-gradient(135deg, #134e4a 0%, #020617 55%, #064e3b 100%);
+      color: var(--white);
+      padding: 86px 0;
+    }
+
+    .urban-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 34px;
+    }
+
+    .urban-card {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: var(--radius);
+      padding: 28px;
+    }
+
+    .urban-card .icon {
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .urban-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 12px;
+    }
+
+    .urban-card p {
+      color: #cbd5e1;
+      line-height: 1.75;
+    }
+
+    .theme-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 34px;
+    }
+
+    .theme {
+      background: var(--surface);
+      border: 1px solid #e2e8f0;
+      border-radius: 18px;
+      padding: 18px 20px;
+      font-size: 1.06rem;
+      font-weight: 700;
+      color: #334155;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    }
+
+    .contact-panel {
+      background: var(--dark);
+      color: var(--white);
+      border-radius: 34px;
+      padding: 44px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 42px;
+      align-items: center;
+    }
+
+    .contact-panel .eyebrow {
+      color: #5eead4;
+    }
+
+    .contact-panel h2 {
+      font-size: clamp(2rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.055em;
+    }
+
+    .contact-panel p {
+      color: #cbd5e1;
+      margin-top: 20px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .contact-card {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 24px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: #e2e8f0;
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    .contact-card .email-link {
+      display: block;
+      color: var(--white);
+      font-size: 1.08rem;
+      font-weight: 800;
+      margin: 14px 0 18px;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-card .button {
+      width: 100%;
+      margin-top: 22px;
+      background: var(--white);
+      color: var(--dark);
+    }
+
+    footer {
+      background: var(--white);
+      border-top: 1px solid #e2e8f0;
+      padding: 28px 0;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .fade-in {
+      animation: fadeUp 0.75s ease both;
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 900px) {
+      .nav-links {
+        display: none;
+      }
+
+      .hero-grid,
+      .two-column,
+      .contact-panel {
+        grid-template-columns: 1fr;
+      }
+
+      .cards-grid,
+      .education-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats-grid,
+      .urban-grid,
+      .theme-grid,
+      .formation-list {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 58px;
+      }
+
+      .contact-panel {
+        padding: 30px;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .container {
+        width: min(100% - 28px, 1120px);
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      .nav .button {
+        display: none;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .profile-card {
+        padding: 18px;
+        border-radius: 26px;
+      }
+
+      .profile-inner {
+        padding: 22px;
+      }
+
+      .mini-stats {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 58px 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" aria-label="Go to homepage">
+        <div class="brand-name">June Fe Gilig Payot</div>
+        <div class="brand-subtitle">Scholar · Practitioner · Mentor</div>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#education">Education</a>
+        <a href="#urban">Urban Ideas</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="button button-primary" href="mailto:junefe.payot@gmail.com">Contact</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="fade-in">
+          <div class="pills" aria-label="Focus areas">
+            <span class="pill">Social Housing Policy & Finance</span>
+            <span class="pill">Community-Driven Upgrading</span>
+            <span class="pill">Climate-Resilient Resettlement</span>
+          </div>
+
+          <h1>Building inclusive, resilient cities through social housing, public leadership, and community-centered urban development.</h1>
+
+          <p class="hero-copy">
+            I am June Fe Gilig Payot, Executive Vice President of the Social Housing Finance Corporation in the Philippines, a licensed Environmental Planner, lawyer, lecturer, public writer, and urban development practitioner focused on housing justice in the Global South.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Work with me →</a>
+            <a class="button button-secondary" href="#urban">Learn about my work</a>
+          </div>
+        </div>
+
+        <aside class="profile-card fade-in" aria-label="Professional profile summary">
+          <div class="profile-inner">
+            <div class="eyebrow">Profile</div>
+            <h2>Senior social housing leader and urban scholar-practitioner</h2>
+            <ul class="profile-list">
+              <li>Executive Vice President, Social Housing Finance Corporation</li>
+              <li>Licensed Environmental Planner, ranked 3rd nationally among 4,973 examinees</li>
+              <li>Member of the Philippine Bar</li>
+              <li>MSc Poverty and Development, Juris Doctor, BA Economics</li>
+              <li>Taguig City, Metro Manila, Philippines</li>
+            </ul>
+          </div>
+
+          <div class="mini-stats">
+            <div class="mini-stat">
+              <strong>10+</strong>
+              <span>years leading social housing programs</span>
+            </div>
+            <div class="mini-stat">
+              <strong>40+</strong>
+              <span>public commentaries on housing and development</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="eyebrow">About</div>
+        <h2 class="section-title">A scholar-practitioner shaped by housing policy, community realities, and public service.</h2>
+
+        <div class="two-column">
+          <div class="statement-card">
+            <div class="eyebrow">Positioning Statement</div>
+            <p>I connect rigorous interdisciplinary analysis with senior public-sector leadership to advance housing systems that are affordable, participatory, climate-aware, and socially just.</p>
+          </div>
+
+          <div class="copy-block">
+            <p>My work sits at the intersection of social housing policy and finance, community-driven upgrading, participatory planning, pro-poor climate adaptation, urban housing vulnerability, gender and intersectionality in housing, and multi-level governance in the Global South.</p>
+            <p>At the Social Housing Finance Corporation, I lead strategy and policy development for community-driven housing programs, including program enhancement, project approvals, coordination with local planning units, implementation oversight, and high-level intergovernmental and multi-stakeholder engagement.</p>
+            <p>I bring the perspective of a practitioner, a lawyer, an environmental planner, a researcher, a lecturer, and a public writer. This combination allows me to translate complex urban problems into practical, evidence-informed, and community-sensitive solutions.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="dark-section">
+      <div class="container">
+        <div class="eyebrow">Current Work</div>
+        <h2 class="section-title">Executive Vice President at the Social Housing Finance Corporation.</h2>
+        <p class="dark-copy">I help lead a national government housing finance institution working on community-driven social housing, settlement upgrading, resilient resettlement, and tenure security for low-income households across the Philippines.</p>
+
+        <div class="stats-grid">
+          <div class="stat-card">
+            <strong>EVP</strong>
+            <span>Senior leadership role in a national social housing finance institution</span>
+          </div>
+          <div class="stat-card">
+            <strong>33</strong>
+            <span>Cities covered by an earlier Mindanao housing implementation portfolio</span>
+          </div>
+          <div class="stat-card">
+            <strong>81</strong>
+            <span>Personnel led as Vice President for Operations in Mindanao</span>
+          </div>
+          <div class="stat-card">
+            <strong>SDG 11</strong>
+            <span>Focus on inclusive, safe, resilient, and sustainable cities</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="eyebrow">Credibility</div>
+        <h2 class="section-title">What I bring to universities, employers, public agencies, development partners, and communities.</h2>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="icon">🏛</div>
+            <h3>Policy and institutional leadership</h3>
+            <p>I lead strategy, policy development, operating-budget oversight, program enhancement, project approvals, and multi-level coordination for public housing and urban development initiatives.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🏘</div>
+            <h3>Social housing expertise</h3>
+            <p>My experience covers the Community Mortgage Program, tenure security, participatory upgrading, resilient resettlement, estate management, livelihood integration, and affordable housing delivery.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📚</div>
+            <h3>Scholarship and public education</h3>
+            <p>I teach, write, and speak on urban development, poverty, climate risk, women’s housing rights, and evidence-informed approaches to socially just cities.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🤝</div>
+            <h3>Community and stakeholder practice</h3>
+            <p>I have worked with local governments, national agencies, NGOs, universities, community organizations, and urban poor federations to turn participation into concrete plans and programs.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🌱</div>
+            <h3>Climate and resilience lens</h3>
+            <p>My work emphasizes pro-poor climate adaptation, climate-induced resettlement, post-disaster recovery, and resilient housing strategies for vulnerable communities.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">📊</div>
+            <h3>Research and analytical methods</h3>
+            <p>I bring experience in program and policy analysis, monitoring and evaluation, survey design, participatory action research, qualitative interviewing, and research writing for policy audiences.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="eyebrow">Education</div>
+        <h2 class="section-title">Interdisciplinary preparation for complex housing and urban problems.</h2>
+
+        <div class="education-grid">
+          <article class="education-card">
+            <div class="icon">🎓</div>
+            <h3>MSc Poverty and Development</h3>
+            <div class="school">University of Manchester</div>
+            <p>Final grade: 68.4, Merit. Thesis on pro-poor adaptation and the role of national policy in meeting the needs of the urban poor.</p>
+          </article>
+
+          <article class="education-card">
+            <div class="icon">⚖</div>
+            <h3>Juris Doctor</h3>
+            <div class="school">University of the Philippines</div>
+            <p>Ranked 11th out of 113 and received the Dean’s Award for Academic Excellence.</p>
+          </article>
+
+          <article class="education-card">
+            <div class="icon">📈</div>
+            <h3>BA Economics</h3>
+            <div class="school">Ateneo de Manila University</div>
+            <p>Top 5% of cohort and shortlisted for the Economics Departmental Award.</p>
+          </article>
+        </div>
+
+        <div class="formation-box">
+          <h3>Selected professional formation</h3>
+          <ul class="formation-list">
+            <li>Licensed Environmental Planner, Philippines — ranked 3rd among 4,973 examinees</li>
+            <li>Member, Philippine Bar</li>
+            <li>Designing Inclusive and Climate Resilient Cities — IHS, Erasmus University Rotterdam</li>
+            <li>Developing Social Housing Projects — IHS, Erasmus University Rotterdam</li>
+            <li>International Housing Finance Program — Wharton School, University of Pennsylvania</li>
+            <li>Land Management and Informal Settlement Regularisation — IHS, Erasmus University Rotterdam</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="urban" class="urban-section">
+      <div class="container">
+        <div class="eyebrow">Educational Focus</div>
+        <h2 class="section-title">Inclusive urban development means building cities where housing, safety, dignity, and opportunity are not reserved for the privileged few.</h2>
+
+        <div class="urban-grid">
+          <article class="urban-card">
+            <div class="icon">👥</div>
+            <h3>Community-driven upgrading</h3>
+            <p>Residents are not merely beneficiaries of housing programs. They are planners, organizers, knowledge-holders, and rights-holders whose participation can improve the legitimacy and durability of urban interventions.</p>
+          </article>
+
+          <article class="urban-card">
+            <div class="icon">🛡</div>
+            <h3>Resilient social housing</h3>
+            <p>Resilience requires more than disaster-safe structures. It requires secure tenure, affordable finance, community capacity, climate-aware planning, livelihood access, and long-term estate management.</p>
+          </article>
+
+          <article class="urban-card">
+            <div class="icon">🌏</div>
+            <h3>Global South perspective</h3>
+            <p>Urban housing vulnerability in the Global South is shaped by rapid urbanization, informality, unequal land markets, climate risk, public finance constraints, and fragmented governance.</p>
+          </article>
+
+          <article class="urban-card">
+            <div class="icon">🏢</div>
+            <h3>Institutional reform</h3>
+            <p>Better housing outcomes depend on better institutions: clearer mandates, accountable implementation, smarter financing, participatory planning, and coordination across government, civil society, academia, and communities.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="eyebrow">Thought Leadership</div>
+        <h2 class="section-title">Selected themes in my work, writing, and public engagement.</h2>
+
+        <div class="theme-grid">
+          <div class="theme">Social housing policy and finance</div>
+          <div class="theme">Community Mortgage Program reform and enhancement</div>
+          <div class="theme">Urban housing vulnerability and inequality</div>
+          <div class="theme">Women-headed households and gender-responsive housing</div>
+          <div class="theme">Pro-poor climate adaptation and resilient resettlement</div>
+          <div class="theme">Participatory planning and community-driven upgrading</div>
+          <div class="theme">Tenure security, usufruct, rental, and affordable housing arrangements</div>
+          <div class="theme">Multi-level governance and urban inclusion in the Global South</div>
+          <div class="theme">Estate management and livelihood integration in housing projects</div>
+          <div class="theme">SDG 10 and SDG 11: reduced inequalities and sustainable cities</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="eyebrow">Teaching, Writing & Speaking</div>
+        <h2 class="section-title">Making housing and urban development understandable, useful, and actionable.</h2>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="icon">📚</div>
+            <h3>University teaching</h3>
+            <p>Professional Lecturer at De La Salle University and Lecturer at Ateneo de Manila University, teaching courses including Global Urban Development and Poverty, Project Design, and sustainable development-oriented subjects.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">✍️</div>
+            <h3>Public writing</h3>
+            <p>Author of 40+ op-eds and commentaries on social housing, urban development, poverty and inequality, and climate change, including public writing in the Philippine Daily Inquirer.</p>
+          </article>
+
+          <article class="card">
+            <div class="icon">🎤</div>
+            <h3>Invited presentations</h3>
+            <p>Speaker and resource person in national and international forums, including World Urban Forum 10, socialized housing summits, Asia Pacific shelter forums, and housing rights events.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="contact-panel">
+          <div>
+            <div class="eyebrow">Contact</div>
+            <h2>Let’s collaborate on inclusive, resilient, and community-centered urban futures.</h2>
+            <p>I welcome conversations with universities, employers, public agencies, development partners, civil society organizations, researchers, and communities working on social housing and urban transformation.</p>
+          </div>
+
+          <div class="contact-card">
+            <div class="eyebrow">Reach me</div>
+            <a class="email-link" href="mailto:junefe.payot@gmail.com">junefe.payot@gmail.com</a>
+            <p><strong>Public writing:</strong><br><a href="https://opinion.inquirer.net/byline/junefe-gilig-payot" target="_blank" rel="noopener noreferrer">opinion.inquirer.net/byline/junefe-gilig-payot</a></p>
+            <p><strong>Location:</strong><br>Taguig City, Metro Manila, Philippines</p>
+            <p><strong>LinkedIn:</strong><br><span>[Insert LinkedIn URL]</span></p>
+            <p><strong>CV:</strong><br><span>[Insert downloadable CV link]</span></p>
+            <a class="button" href="mailto:junefe.payot@gmail.com">Send an email</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> June Fe Gilig Payot. All rights reserved.</p>
+      <p>Scholar · Practitioner · Mentor in inclusive urban development and resilient social housing.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
